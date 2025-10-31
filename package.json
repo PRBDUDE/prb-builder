@@ -1,0 +1,13 @@
+{
+  "name": "@prb/build-manager",
+  "version": "1.0.0",
+  "description": "Common builder functions used in development",
+  "builders": "builders.json",
+  "license": "ISC",
+  "author": "Dean Neighbour",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
