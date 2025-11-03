@@ -1,0 +1,9 @@
+{
+  "builders": {
+    "patch-lib-package": {
+      "implementation": "./patch-lib-package",
+      "schema": "./patch-lib-package/schema.json",
+      "description": "Patch library package"
+    }
+  }
+}

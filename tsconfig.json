@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "ESNext",
+    "outDir": "./dist/builder",
+    "rootDir": "./builder",
+    "declaration": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noEmitOnError": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "sourceMap": false,
+    "types": ["node"],
+  },
+  "include": [
+    "builder/**/*"
+  ],
+  "exclude": ["node_modules"]
+}

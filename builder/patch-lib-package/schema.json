@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "properties": {
+    "libraryPackagePath": {
+      "description": "The name of the file to patch.",
+      "type": "string",
+      "default": "src/assets/build.json"
+    },
+    "packagePath": {
+      "description": "The full path to the package.json file in case there are multiple",
+      "type": "string",
+      "default": "package.json"
+    }
+  }
+}
