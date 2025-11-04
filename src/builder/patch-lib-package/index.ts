@@ -29,6 +29,9 @@ export default createBuilder((options: BuildOptions, ctx): any => {
         // ctx.logger.info("Found package.json: " + packageContent);
     } catch (error) {
         ctx.logger.error("Unable to read \"" + options.packagePath + "\": " + error.message);
+        return {
+            success: false
+        };
     }
     for (const key in libraryPackageJsonContent) {
         if (key === "version") {
