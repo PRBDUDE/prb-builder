@@ -10,7 +10,7 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "postbuild": "concurrently \"npm run copy:schema\" \"npm run copy:package\"",
-    "copy:schema": "copyfiles \"builder/**/*.json\" dist",
+    "copy:schema": "copyfiles --up 1 \"src/builder/**/*.json\" dist",
     "copy:package": "copyfiles package.json dist/builder",
     "build:watch": "tsc-watch --onSuccess \"npm run postbuild\"",
     "unpublish:package": "npm unpublish @prb/builder -f"
