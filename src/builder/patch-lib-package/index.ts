@@ -10,12 +10,12 @@ interface BuildOptions extends JsonObject {
 
 export default createBuilder((options: BuildOptions, ctx): any => {
     ctx.logger.info("Patching library package " + options.libraryPackagePath + "...");
-    let libaryPackagePath = "";
+    let libraryPackagePath = "";
     let libraryPackageJsonContent: any;
     const filePath = path.dirname(`${options.libraryPackagePath}`);
     try {
-        libaryPackagePath = `${getSystemPath(normalize(ctx.workspaceRoot))}/${options.libraryPackagePath}`;
-        libraryPackageJsonContent = JSON.parse(readFileSync(libaryPackagePath, "utf-8"));
+        libraryPackagePath = `${getSystemPath(normalize(ctx.workspaceRoot))}/${options.libraryPackagePath}`;
+        libraryPackageJsonContent = JSON.parse(readFileSync(libraryPackagePath, "utf-8"));
         // ctx.logger.info("Found library package.json: " + JSON.stringify(libraryPackageJsonContent, undefined, 2));
     } catch (error) {
         ctx.logger.error("Unable to read \"" + options.libraryPackagePath + "\": " + error.message);
@@ -45,7 +45,7 @@ export default createBuilder((options: BuildOptions, ctx): any => {
         libraryPackageJsonContent.peerDependencies[key] = JSON.parse(packageContent).dependencies[key];
     }
     ctx.logger.info("Writing library package.json: " + JSON.stringify(libraryPackageJsonContent, undefined, 2));
-    writeFileSync(libaryPackagePath, JSON.stringify(libraryPackageJsonContent, undefined, 2), "utf-8");
+    writeFileSync(libraryPackagePath, JSON.stringify(libraryPackageJsonContent, undefined, 2), "utf-8");
     return {
         success: true,
     }
