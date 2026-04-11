@@ -14,7 +14,7 @@
     "copy:package": "copyfiles package.json dist/builder",
     "build:watch": "tsc-watch --onSuccess \"npm run postbuild\"",
     "unpublish:package": "npm unpublish @prb/builder -f",
-    "publish:package": "npm publish dist/builder --registry http://localhost:4873"
+    "publish:package": "cd dist/builder && npm publish --registry http://localhost:4873"
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.2003.8",
