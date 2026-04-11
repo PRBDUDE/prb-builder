@@ -12,7 +12,6 @@ export default createBuilder((options: BuildOptions, ctx): any => {
     ctx.logger.info("Patching library package " + options.libraryPackagePath + "...");
     let libraryPackagePath = "";
     let libraryPackageJsonContent: any;
-    const filePath = path.dirname(`${options.libraryPackagePath}`);
     try {
         libraryPackagePath = `${getSystemPath(normalize(ctx.workspaceRoot))}/${options.libraryPackagePath}`;
         libraryPackageJsonContent = JSON.parse(readFileSync(libraryPackagePath, "utf-8"));
