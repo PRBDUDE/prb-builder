@@ -4,7 +4,7 @@
   "description": "Common builder functions used in development",
   "builders": "builders.json",
   "license": "ISC",
-  "author": "PRBDude",
+  "author": "PRB Dude",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {

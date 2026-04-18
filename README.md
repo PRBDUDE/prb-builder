@@ -77,7 +77,7 @@ Veradaccio can be setup on an IIS server https://verdaccio.org/docs/iss-server t
 work with your *CICD* pipeline.
 
 See the following for more information:
-[VERADACCIO-SETUP.md](VERADACCIO-SETUP.md)
+[VERADACCIO-SETUP.md](VERDACCIO-SETUP.md)
 
 ### Angular Project Configuration
 
