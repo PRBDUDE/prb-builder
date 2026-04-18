@@ -11,21 +11,22 @@
     }
 
     h2 {
-        background-color: #131314;
-        padding: 10px;
-        color: #13b6e7;
+        color: #8cafd4;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     h3 {
-        background-color: #cce1e7;
-        padding: 8px;
-        color: #000000;
+        color: #8cafd4;
+        width: fit-content;
+        padding-right: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #8cafd4;
     }
 
     h4 {
         background-color: #131314;
         padding-top: 10px;
-        color: #13b6e7;
+        color: #8cafd4;
     }
 </style>
 
