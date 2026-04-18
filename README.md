@@ -1,9 +1,13 @@
 <style>
     h1 {
-        background-color: #131314;
-        color: #13b6e7;
+        color: #2e9ca3;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-color: #e0edfb;
+        width: fit-content;
         padding: 10px;
-        border-bottom: 1px solid #13b6e7;
+        border-radius: 40px;
+        margin: 1rem auto;
     }
 
     h2 {
@@ -30,16 +34,18 @@
 The purpose of this project is to provide a set of *Angular* builders.
 
 ### Builders
+
 #### patch-lib-package builder
+
 The 'patch-lib-package' builder is used to patch the 'package.json' file of a library.
-This builder is used to keep the 'package.json' file of a library up to date with the 'package.json' 
-file of the library project. So many times I have had to manually update the 'package.json' file of 
+This builder is used to keep the 'package.json' file of a library up to date with the 'package.json'
+file of the library project. So many times I have had to manually update the 'package.json' file of
 a library project. This builder will do that for you.
 
-The versions of the 'peerdependencies' in the library project will be updated to match the versions of the 
+The versions of the 'peerdependencies' in the library project will be updated to match the versions of the
 'dependencies' in the primary project.json file.
 
-The versions of the 'dependencies' in the library project will be updated to match the versions of the 
+The versions of the 'dependencies' in the library project will be updated to match the versions of the
 'dependencies' in the primary project.json file.
 
 *Note* that you must have a 'package.json' file in the library project which is used to publish the library.
@@ -68,12 +74,12 @@ Examples of private *NPM* registries your company may use:
 - GCP Artifact Registry
 - AWS Artifact Registry
 
-If you don't have a private NPM registry, and you would like to use a private *npm* registry, 
+If you don't have a private NPM registry, and you would like to use a private *npm* registry,
 you can use [Verdaccio](https://verdaccio.org/).
-Keep in mind that Veradaccio is a *PRIVATE LOCAL NPM* registry and will not work with your 
+Keep in mind that Veradaccio is a *PRIVATE LOCAL NPM* registry and will not work with your
 *CICD* pipeline.
 
-Veradaccio can be setup on an IIS server https://verdaccio.org/docs/iss-server to make it 
+Veradaccio can be setup on an IIS server https://verdaccio.org/docs/iss-server to make it
 work with your *CICD* pipeline.
 
 See the following for more information:
@@ -95,19 +101,19 @@ In the `angular.json` file, add the following to the `architect` section.`
 
 ```json
   "patch-lib-info": {
-    "builder": "@prb/builder:patch-lib-package",
-    "options": {
-      "libraryPackagePath": "lib/prb-lib/package.json",
-      "packagePath": "package.json"
-    }
-  }
+"builder": "@prb/builder:patch-lib-package",
+"options": {
+"libraryPackagePath": "lib/prb-lib/package.json",
+"packagePath": "package.json"
+}
+}
 ```
 
 Use the 'ng run' command to run the builder.
 
 ##### Example
+
 Let's say you want to run the builder for the 'prb-lib' library.
 The 'prb-lib' project contains a 'demo' application to test the library before publishing it to the *NPM* registry.
-
 
 See the [BUILDER.md](./builder.md) for more information.
